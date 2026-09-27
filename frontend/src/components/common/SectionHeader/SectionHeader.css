@@ -1,0 +1,247 @@
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.lumora-section-header {
+  width: 100%;
+
+  display: flex;
+
+  gap: 24px;
+
+  margin-bottom: 22px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   ALIGNMENT
+========================================================= */
+
+.lumora-section-header--between {
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.lumora-section-header--start {
+  align-items: flex-start;
+
+  justify-content: flex-start;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lumora-section-header__content {
+  min-width: 0;
+
+  flex: 1;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.lumora-section-header__title {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 24px;
+
+  font-weight: 650;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.5px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.lumora-section-header__description {
+  max-width: 600px;
+
+  margin: 6px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   VIEW ALL LINK
+========================================================= */
+
+.lumora-section-header__link {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-section-header__link:hover {
+  color: var(--color-primary-hover);
+
+  gap: 9px;
+}
+
+.lumora-section-header__link:active {
+  transform: translateX(1px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .lumora-section-header {
+    gap: 18px;
+
+    margin-bottom: 20px;
+  }
+
+  .lumora-section-header__title {
+    font-size: 22px;
+  }
+
+  .lumora-section-header__description {
+    font-size: 13px;
+  }
+
+  .lumora-section-header__link {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .lumora-section-header {
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 16px;
+  }
+
+  .lumora-section-header--between {
+    align-items: flex-start;
+  }
+
+  .lumora-section-header__title {
+    font-size: 20px;
+
+    letter-spacing: -0.4px;
+  }
+
+  .lumora-section-header__description {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+  .lumora-section-header__link {
+    padding-top: 3px;
+
+    font-size: 11px;
+
+    gap: 5px;
+  }
+
+  .lumora-section-header__link:hover {
+    gap: 7px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .lumora-section-header--between {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+  .lumora-section-header__content {
+    min-width: 0;
+  }
+
+  .lumora-section-header__title {
+    font-size: 19px;
+  }
+
+  .lumora-section-header__description {
+    font-size: 11px;
+  }
+
+  .lumora-section-header__link {
+    flex-shrink: 0;
+
+    padding-top: 2px;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .lumora-section-header {
+    gap: 8px;
+  }
+
+  .lumora-section-header__title {
+    font-size: 18px;
+  }
+
+  .lumora-section-header__description {
+    font-size: 10.5px;
+  }
+
+  .lumora-section-header__link {
+    font-size: 10px;
+  }
+}

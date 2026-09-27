@@ -1,0 +1,672 @@
+/* =========================================================
+   LUMORA — REGISTER PAGE
+   ========================================================= */
+
+.register-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #202020;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+/* ---------------------------------------------------------
+   Decorative background
+   --------------------------------------------------------- */
+
+.register-page__decor {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  background: #fff2ed;
+}
+
+.register-page__decor--top {
+  width: 420px;
+  height: 420px;
+  top: -220px;
+  right: -120px;
+}
+
+.register-page__decor--bottom {
+  width: 260px;
+  height: 260px;
+  bottom: -150px;
+  left: -120px;
+  opacity: 0.7;
+}
+
+/* ---------------------------------------------------------
+   Main container
+   --------------------------------------------------------- */
+
+.register-container {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   Brand
+   --------------------------------------------------------- */
+
+.register-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.register-brand__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #202020;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.register-brand__mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #ff6638;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   Card
+   --------------------------------------------------------- */
+
+.register-card {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 18px;
+  padding: 42px 44px 34px;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.05),
+    0 2px 8px rgba(0, 0, 0, 0.025);
+}
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+
+.register-card__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px;
+  border-radius: 14px;
+  background: #fff1eb;
+  color: #ff6638;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #ff6638;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.register-card__header h1 {
+  margin: 0 0 10px;
+  color: #202020;
+  font-size: 34px;
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1.3px;
+}
+
+.register-card__header p {
+  max-width: 390px;
+  margin: 0 auto;
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   Form
+   --------------------------------------------------------- */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.auth-form-error {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #f3b9ae;
+  border-radius: 9px;
+  background: #fff4f1;
+  color: #b43622;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-field label {
+  color: #292929;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.register-field input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #222222;
+  padding: 0 14px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.register-field input::placeholder {
+  color: #a5a5a5;
+}
+
+.register-field input:hover {
+  border-color: #cfcfcf;
+}
+
+.register-field input:focus {
+  border-color: #ff6638;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 102, 56, 0.11);
+}
+
+/* ---------------------------------------------------------
+   Password field
+   --------------------------------------------------------- */
+
+.register-password {
+  position: relative;
+}
+
+.register-password input {
+  padding-right: 48px;
+}
+
+.register-password__toggle {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  color: #8a8a8a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border-radius: 6px;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.register-password__toggle:hover {
+  color: #ff6638;
+  background: #fff2ed;
+}
+
+/* ---------------------------------------------------------
+   Terms
+   --------------------------------------------------------- */
+
+.register-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 1px;
+  color: #777777;
+  font-size: 12px;
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.register-terms input {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  margin: 1px 0 0;
+  accent-color: #ff6638;
+  cursor: pointer;
+}
+
+.register-terms a {
+  color: #555555;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-terms a:hover {
+  color: #ff6638;
+}
+
+/* ---------------------------------------------------------
+   Submit button
+   --------------------------------------------------------- */
+
+.register-submit {
+  width: 100%;
+  height: 49px;
+  margin-top: 4px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #ff6638;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(255, 102, 56, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-submit:hover {
+  background: #f4582c;
+  transform: translateY(-1px);
+  box-shadow: 0 9px 22px rgba(255, 102, 56, 0.24);
+}
+
+.register-submit:active {
+  transform: translateY(0);
+}
+
+.register-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.register-submit svg {
+  transition: transform 0.2s ease;
+}
+
+.register-submit:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---------------------------------------------------------
+   Login link
+   --------------------------------------------------------- */
+
+.register-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin-top: 26px;
+  padding-top: 24px;
+
+  border-top: 1px solid #eeeeee;
+
+  color: #777777;
+  font-size: 13px;
+}
+
+.register-login a {
+  color: #ff6638;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-login a:hover {
+  text-decoration: underline;
+}
+
+.auth-logo {
+  width: 145px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   Footer text
+   --------------------------------------------------------- */
+
+.register-footer {
+  margin: 20px 0 0;
+  text-align: center;
+  color: #a0a0a0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 28px 16px;
+    align-items: flex-start;
+  }
+
+  .register-page__decor--top {
+    width: 280px;
+    height: 280px;
+    top: -150px;
+    right: -100px;
+  }
+
+  .register-page__decor--bottom {
+    width: 180px;
+    height: 180px;
+    bottom: -100px;
+    left: -90px;
+  }
+
+  .register-brand {
+    margin-bottom: 22px;
+  }
+
+  .register-brand__link {
+    font-size: 23px;
+  }
+
+  .register-card {
+    padding: 32px 22px 27px;
+    border-radius: 15px;
+  }
+
+  .register-card__header {
+    margin-bottom: 26px;
+  }
+
+  .register-card__header h1 {
+    font-size: 29px;
+  }
+
+  .register-card__header p {
+    font-size: 13px;
+  }
+
+  .register-form {
+    gap: 17px;
+  }
+}
+
+@media (max-width: 380px) {
+  .register-page {
+    padding: 20px 12px;
+  }
+
+  .register-card {
+    padding: 28px 18px 24px;
+  }
+
+  .register-card__header h1 {
+    font-size: 27px;
+  }
+
+  .register-login {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* =========================================================
+   GOOGLE SIGNUP
+   ========================================================= */
+
+.register-divider {
+  position: relative;
+  margin: 28px 0;
+  text-align: center;
+}
+
+.register-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #eeeeee;
+}
+
+.register-divider span {
+  position: relative;
+  z-index: 1;
+  padding: 0 12px;
+  background: #ffffff;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.google-register-wrapper {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.google-register-button {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-register-button > div {
+  max-width: 100%;
+}
+
+.google-register-button iframe {
+  max-width: 100%;
+}
+
+
+
+/* =========================================================
+   REGISTER SPINNER
+   ========================================================= */
+
+.register-spinner {
+  animation: registerSpinner 0.9s linear infinite;
+}
+
+@keyframes registerSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+[data-theme="dark"] .register-divider span {
+  background: var(--color-bg, #ffffff);
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .google-register-wrapper {
+    overflow: hidden;
+  }
+
+  .google-register-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   EMAIL VERIFICATION SUCCESS
+========================================= */
+
+.verification-success-card {
+  text-align: center;
+}
+
+.verification-success-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 96, 72, 0.1);
+  color: #ff6048;
+}
+
+.verification-message {
+  margin: 24px 0;
+  padding: 18px 20px;
+
+  border-radius: 12px;
+
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+
+  text-align: left;
+}
+
+.verification-message p {
+  margin: 0;
+
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.verification-message p + p {
+  margin-top: 8px;
+}
+
+.verification-message strong {
+  color: #333;
+}
+
+.verification-resend-message {
+  margin: 14px 0;
+
+  color: #ff6048;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.verification-login-link {
+  display: block;
+
+  margin-top: 18px;
+
+  color: #ff6048;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.verification-login-link:hover {
+  text-decoration: underline;
+}
+
+.verification-help {
+  margin: 20px 0 0;
+
+  color: #888;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+  .verification-success-card {
+    padding: 24px 18px;
+  }
+
+  .verification-success-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .verification-message {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,914 @@
+/* =========================================================
+   FRESH ON LUMORA / LATEST BANNERS
+========================================================= */
+
+.lumora-latest-banners {
+  width: 100%;
+
+  padding: 32px 0 72px;
+
+  background: var(--color-bg);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+.lumora-latest-banners__container {
+  width: min(
+    calc(100% - 32px),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.lumora-latest-banners__header {
+  margin-bottom: 22px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.lumora-latest-banners__eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1.2;
+}
+
+.lumora-latest-banners__header h2 {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+.lumora-latest-banners__header p {
+  max-width: 560px;
+
+  margin: 7px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+.lumora-latest-banners__view-all {
+  display: inline-flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  gap: 7px;
+
+  padding-bottom: 2px;
+
+  color: var(--color-primary);
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.lumora-latest-banners__view-all:hover {
+  color: var(--color-primary-hover);
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   BANNER GRID
+========================================================= */
+
+.lumora-latest-banners__grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   STORY BANNER
+========================================================= */
+
+.lumora-latest-banner {
+  position: relative;
+
+  width: 100%;
+
+  height: 285px;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--color-border) 85%,
+      transparent
+    );
+
+  border-radius: var(--radius-lg);
+
+  background: #242220;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.08);
+
+  animation:
+    lumoraBannerEnter 450ms ease both;
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.lumora-latest-banner:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes lumoraBannerEnter {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   BLURRED BACKGROUND
+========================================================= */
+
+.lumora-latest-banner__background {
+  position: absolute;
+
+  inset: -35px;
+
+  z-index: -3;
+
+  background-image: var(--banner-image);
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  filter: blur(28px);
+
+  transform: scale(1.15);
+
+  opacity: 0.48;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.lumora-latest-banner__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 27, 25, 0.97) 0%,
+      rgba(34, 32, 29, 0.91) 38%,
+      rgba(43, 40, 36, 0.76) 70%,
+      rgba(48, 44, 40, 0.63) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PRIMARY GLOW
+========================================================= */
+
+.lumora-latest-banner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -125px;
+  bottom: -165px;
+
+  z-index: -1;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  opacity: 0.10;
+
+  filter: blur(50px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lumora-latest-banner__content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.lumora-latest-banner__cover {
+  width: 148px;
+  height: 218px;
+
+  flex: 0 0 148px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #2b2926;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.34);
+
+  transform: rotate(-1deg);
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.lumora-latest-banner:hover
+  .lumora-latest-banner__cover {
+  transform:
+    rotate(0deg)
+    scale(1.02);
+
+  box-shadow:
+    0 16px 36px
+    rgba(0, 0, 0, 0.42);
+}
+
+.lumora-latest-banner__cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   STORY INFORMATION
+========================================================= */
+
+.lumora-latest-banner__info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   TOP META
+========================================================= */
+
+.lumora-latest-banner__top {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.lumora-latest-banner__category {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 22px;
+
+  padding: 4px 9px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 107, 61, 0.16);
+
+  border: 1px solid
+    rgba(255, 107, 61, 0.25);
+
+  color: #ff9a7c;
+
+  font-size: 9px;
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.lumora-latest-banner__label {
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 9px;
+
+  font-weight: 650;
+
+  letter-spacing: 0.9px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.lumora-latest-banner__info h3 {
+  max-width: 330px;
+
+  margin: 12px 0 0;
+
+  color: #ffffff;
+
+  font-family: var(--font-heading);
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.45px;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   AUTHOR
+========================================================= */
+
+.lumora-latest-banner__author {
+  margin: 7px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.lumora-latest-banner__description {
+  max-width: 360px;
+
+  margin: 11px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.70);
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   READ STORY BUTTON
+========================================================= */
+
+.lumora-latest-banner__button {
+  margin-top: 15px;
+
+  min-height: 34px;
+
+  padding: 0 12px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.20);
+
+  border-radius: var(--radius-sm);
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-latest-banner__button:hover {
+  background: var(--color-primary);
+
+  border-color:
+    var(--color-primary);
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.lumora-latest-banner__progress {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 5;
+
+  height: 3px;
+
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+}
+
+.lumora-latest-banner__progress span {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--color-primary);
+
+  transform-origin: left;
+
+  animation:
+    lumoraBannerProgress 4s linear;
+}
+
+@keyframes lumoraBannerProgress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .lumora-latest-banner {
+    height: 300px;
+  }
+
+  .lumora-latest-banner__content {
+    padding: 25px;
+  }
+
+  .lumora-latest-banner__cover {
+    width: 155px;
+    height: 230px;
+
+    flex-basis: 155px;
+  }
+
+  .lumora-latest-banner__info h3 {
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .lumora-latest-banner {
+    height: 270px;
+  }
+
+  .lumora-latest-banner__content {
+    padding: 20px;
+
+    gap: 17px;
+  }
+
+  .lumora-latest-banner__cover {
+    width: 126px;
+    height: 195px;
+
+    flex-basis: 126px;
+  }
+
+  .lumora-latest-banner__info h3 {
+    font-size: 20px;
+  }
+
+  .lumora-latest-banner__description {
+    -webkit-line-clamp: 2;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .lumora-latest-banners__grid {
+    gap: 14px;
+  }
+
+  .lumora-latest-banner {
+    height: 250px;
+  }
+
+  .lumora-latest-banner__content {
+    padding: 18px;
+
+    gap: 14px;
+  }
+
+  .lumora-latest-banner__cover {
+    width: 108px;
+    height: 174px;
+
+    flex-basis: 108px;
+  }
+
+  .lumora-latest-banner__info h3 {
+    font-size: 18px;
+  }
+
+  .lumora-latest-banner__description {
+    margin-top: 8px;
+
+    font-size: 10px;
+  }
+
+  .lumora-latest-banner__button {
+    margin-top: 11px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .lumora-latest-banners {
+    padding: 26px 0 56px;
+  }
+
+  .lumora-latest-banners__container {
+    width: min(
+      calc(100% - 24px),
+      var(--container-width)
+    );
+  }
+
+  .lumora-latest-banners__grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .lumora-latest-banner {
+    height: 250px;
+  }
+
+  .lumora-latest-banner__cover {
+    width: 120px;
+    height: 190px;
+
+    flex-basis: 120px;
+  }
+
+  .lumora-latest-banner__info h3 {
+    font-size: 20px;
+  }
+
+  .lumora-latest-banner__description {
+    -webkit-line-clamp: 2;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .lumora-latest-banners {
+    padding: 22px 0 44px;
+  }
+
+  .lumora-latest-banners__container {
+    width: min(
+      calc(100% - 20px),
+      var(--container-width)
+    );
+  }
+
+  .lumora-latest-banners__header {
+    margin-bottom: 18px;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .lumora-latest-banners__header h2 {
+    font-size: 21px;
+  }
+
+  .lumora-latest-banners__header p {
+    font-size: 12px;
+  }
+
+  .lumora-latest-banners__view-all {
+    margin-top: 4px;
+  }
+
+  .lumora-latest-banner {
+    height: 220px;
+  }
+
+  .lumora-latest-banner__content {
+    padding: 16px;
+
+    gap: 13px;
+  }
+
+  .lumora-latest-banner__cover {
+    width: 92px;
+    height: 155px;
+
+    flex-basis: 92px;
+
+    border-radius: 9px;
+  }
+
+  .lumora-latest-banner__category {
+    min-height: 20px;
+
+    padding: 4px 8px;
+
+    font-size: 8px;
+  }
+
+  .lumora-latest-banner__label {
+    font-size: 8px;
+  }
+
+  .lumora-latest-banner__info h3 {
+    margin-top: 9px;
+
+    font-size: 17px;
+  }
+
+  .lumora-latest-banner__author {
+    margin-top: 5px;
+
+    font-size: 10px;
+  }
+
+  .lumora-latest-banner__description {
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    -webkit-line-clamp: 2;
+  }
+
+  .lumora-latest-banner__button {
+    margin-top: 10px;
+
+    min-height: 30px;
+
+    padding: 0 9px;
+
+    font-size: 9px;
+  }
+
+  .lumora-latest-banner::after {
+    width: 200px;
+    height: 200px;
+
+    right: -100px;
+    bottom: -120px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .lumora-latest-banner {
+    height: 205px;
+  }
+
+  .lumora-latest-banner__content {
+    padding: 14px;
+
+    gap: 10px;
+  }
+
+  .lumora-latest-banner__cover {
+    width: 78px;
+    height: 140px;
+
+    flex-basis: 78px;
+  }
+
+  .lumora-latest-banner__info h3 {
+    font-size: 15px;
+  }
+
+  .lumora-latest-banner__description {
+    display: none;
+  }
+
+  .lumora-latest-banner__button {
+    margin-top: 8px;
+
+    min-height: 28px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .lumora-latest-banner {
+    animation: none;
+
+    transition: none;
+  }
+
+  .lumora-latest-banner__cover {
+    transition: none;
+  }
+
+  .lumora-latest-banner__button {
+    transition: none;
+  }
+
+  .lumora-latest-banner__progress span {
+    animation: none;
+  }
+}

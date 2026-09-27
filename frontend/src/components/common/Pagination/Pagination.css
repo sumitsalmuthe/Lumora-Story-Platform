@@ -1,0 +1,99 @@
+.lumora-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: 100%;
+}
+
+.lumora-pagination__pages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lumora-pagination__button {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.lumora-pagination__button:hover:not(:disabled) {
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.lumora-pagination__button--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.lumora-pagination__button--active:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #ffffff;
+}
+
+.lumora-pagination__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.lumora-pagination__arrow {
+  padding: 0;
+}
+
+.lumora-pagination__ellipsis {
+  min-width: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-text-muted);
+
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .lumora-pagination {
+    gap: 4px;
+  }
+
+  .lumora-pagination__pages {
+    gap: 4px;
+  }
+
+  .lumora-pagination__button {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+  }
+
+  .lumora-pagination__button:first-child,
+  .lumora-pagination__button:last-child {
+    display: none;
+  }
+}

@@ -1,0 +1,155 @@
+/* =========================================================
+   BADGE
+========================================================= */
+
+.lumora-badge {
+  width: fit-content;
+  max-width: 100%;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+
+  border-radius: 999px;
+
+  font-family: var(--font-body);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  box-sizing: border-box;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+/* =========================================================
+   SIZES
+========================================================= */
+
+.lumora-badge--small {
+  min-height: 22px;
+
+  padding: 0 8px;
+
+  font-size: 11px;
+}
+
+.lumora-badge--medium {
+  min-height: 26px;
+
+  padding: 0 10px;
+
+  font-size: 12px;
+}
+
+.lumora-badge--large {
+  min-height: 30px;
+
+  padding: 0 12px;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   DEFAULT
+========================================================= */
+
+.lumora-badge--default {
+  background: var(--color-surface-secondary);
+
+  color: var(--color-text-secondary);
+
+  border-color: var(--color-border);
+}
+
+/* =========================================================
+   PRIMARY
+========================================================= */
+
+.lumora-badge--primary {
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  border-color: transparent;
+}
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.lumora-badge--success {
+  background: rgba(33, 135, 57, 0.1);
+
+  color: var(--color-success);
+
+  border-color: transparent;
+}
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.lumora-badge--warning {
+  background: rgba(183, 121, 31, 0.1);
+
+  color: var(--color-warning);
+
+  border-color: transparent;
+}
+
+/* =========================================================
+   DANGER
+========================================================= */
+
+.lumora-badge--danger {
+  background: rgba(214, 69, 69, 0.1);
+
+  color: var(--color-danger);
+
+  border-color: transparent;
+}
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.lumora-badge--info {
+  background: rgba(53, 120, 200, 0.1);
+
+  color: var(--color-info);
+
+  border-color: transparent;
+}
+
+/* =========================================================
+   DARK THEME SUPPORT
+========================================================= */
+
+[data-theme="dark"] .lumora-badge--success {
+  background: rgba(33, 135, 57, 0.16);
+}
+
+[data-theme="dark"] .lumora-badge--warning {
+  background: rgba(183, 121, 31, 0.16);
+}
+
+[data-theme="dark"] .lumora-badge--danger {
+  background: rgba(214, 69, 69, 0.16);
+}
+
+[data-theme="dark"] .lumora-badge--info {
+  background: rgba(53, 120, 200, 0.16);
+}

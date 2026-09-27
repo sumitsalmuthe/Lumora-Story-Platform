@@ -1,0 +1,28 @@
+.lumora-page-container {
+  width: min(100% - 32px, var(--container-width));
+  margin-inline: auto;
+}
+
+.lumora-page-container--narrow {
+  width: min(100% - 32px, 900px);
+}
+
+.lumora-page-container--wide {
+  width: min(100% - 32px, 1320px);
+}
+
+@media (max-width: 768px) {
+  .lumora-page-container,
+  .lumora-page-container--narrow,
+  .lumora-page-container--wide {
+    width: min(100% - 24px, var(--container-width));
+  }
+}
+
+@media (max-width: 480px) {
+  .lumora-page-container,
+  .lumora-page-container--narrow,
+  .lumora-page-container--wide {
+    width: min(100% - 20px, var(--container-width));
+  }
+}

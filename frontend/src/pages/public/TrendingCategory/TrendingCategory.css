@@ -1,0 +1,705 @@
+/* =========================================================
+   TRENDING CATEGORY PAGE
+========================================================= */
+
+.lumora-trending-category {
+  min-height: 100vh;
+
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lumora-trending-category__container {
+  width: min(100% - 32px, var(--container-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lumora-trending-category__hero {
+  padding: 42px 0 70px;
+
+  background: var(--color-bg);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-trending-category__back {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.lumora-trending-category__back:hover {
+  color: var(--color-primary);
+
+  gap: 9px;
+}
+
+.lumora-trending-category__eyebrow {
+  display: block;
+
+  margin-top: 48px;
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+.lumora-trending-category__hero h1 {
+  max-width: 800px;
+
+  margin: 12px 0 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(40px, 5vw, 60px);
+
+  font-weight: 700;
+
+  line-height: 1.06;
+
+  letter-spacing: -2px;
+}
+
+.lumora-trending-category__hero p {
+  max-width: 620px;
+
+  margin: 17px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   STORIES SECTION
+========================================================= */
+
+.lumora-trending-category__stories {
+  padding: 66px 0 72px;
+
+  background: var(--color-bg-secondary);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.lumora-trending-category__header {
+  margin-bottom: 24px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.lumora-trending-category__header > div > span {
+  color: var(--color-primary);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+.lumora-trending-category__header h2 {
+  margin: 6px 0 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 24px;
+
+  font-weight: 650;
+
+  line-height: 1.2;
+}
+
+.lumora-trending-category__header > span {
+  flex-shrink: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   STORY LIST
+========================================================= */
+
+.lumora-trending-category__list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================================================
+   STORY CARD
+========================================================= */
+
+.lumora-trending-category__story {
+  min-height: 148px;
+
+  padding: 15px;
+
+  display: grid;
+
+  grid-template-columns: 38px 88px minmax(0, 1fr) 38px;
+
+  align-items: center;
+
+  gap: 17px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.lumora-trending-category__story:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   RANK
+========================================================= */
+
+.lumora-trending-category__rank {
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.lumora-trending-category__cover {
+  width: 88px;
+
+  height: 116px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: var(--radius-sm);
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--color-primary-soft),
+      var(--color-bg-secondary)
+    );
+
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lumora-trending-category__content {
+  min-width: 0;
+}
+
+.lumora-trending-category__genre {
+  display: inline-block;
+
+  color: var(--color-primary);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.1px;
+
+  text-transform: uppercase;
+}
+
+.lumora-trending-category__title {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 18px;
+
+  font-weight: 650;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition: color var(--transition-fast);
+}
+
+.lumora-trending-category__title:hover {
+  color: var(--color-primary);
+}
+
+.lumora-trending-category__author {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+.lumora-trending-category__content p {
+  max-width: 680px;
+
+  margin: 9px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.55;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.lumora-trending-category__stats {
+  margin-top: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+}
+
+.lumora-trending-category__stats span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.lumora-trending-category__stats svg {
+  color: var(--color-primary);
+}
+
+.lumora-trending-category__stats strong {
+  margin-left: auto;
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   READ BUTTON
+========================================================= */
+
+.lumora-trending-category__read {
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--color-primary);
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-trending-category__read:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+.lumora-trending-category__explore {
+  padding: 0 0 72px;
+
+  background: var(--color-bg-secondary);
+}
+
+.lumora-trending-category__explore-box {
+  min-height: 100px;
+
+  padding: 22px 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+}
+
+.lumora-trending-category__explore-box > svg {
+  flex-shrink: 0;
+
+  color: var(--color-primary);
+}
+
+.lumora-trending-category__explore-box > div {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.lumora-trending-category__explore-box > div > span {
+  color: var(--color-primary);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.lumora-trending-category__explore-box h2 {
+  margin: 5px 0 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 17px;
+
+  font-weight: 650;
+}
+
+.lumora-trending-category__explore-box a {
+  min-height: 36px;
+
+  padding: 0 14px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  border: 1px solid var(--color-primary);
+
+  border-radius: var(--radius-sm);
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.lumora-trending-category__explore-box a:hover {
+  background: var(--color-primary);
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .lumora-trending-category__story {
+    grid-template-columns: 34px 82px minmax(0, 1fr) 34px;
+
+    gap: 14px;
+  }
+
+  .lumora-trending-category__cover {
+    width: 82px;
+
+    height: 108px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lumora-trending-category__container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .lumora-trending-category__hero {
+    padding: 34px 0 56px;
+  }
+
+  .lumora-trending-category__eyebrow {
+    margin-top: 42px;
+  }
+
+  .lumora-trending-category__hero h1 {
+    font-size: 48px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .lumora-trending-category__stories {
+    padding: 54px 0 60px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .lumora-trending-category__hero {
+    padding: 30px 0 46px;
+  }
+
+  .lumora-trending-category__eyebrow {
+    margin-top: 36px;
+  }
+
+  .lumora-trending-category__hero h1 {
+    font-size: 38px;
+
+    letter-spacing: -1.1px;
+  }
+
+  .lumora-trending-category__hero p {
+    margin-top: 14px;
+
+    font-size: 12px;
+  }
+
+  .lumora-trending-category__header {
+    align-items: flex-start;
+
+    margin-bottom: 18px;
+  }
+
+  .lumora-trending-category__header h2 {
+    font-size: 21px;
+  }
+
+  .lumora-trending-category__story {
+    grid-template-columns: 30px 70px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 13px;
+  }
+
+  .lumora-trending-category__cover {
+    width: 70px;
+
+    height: 96px;
+  }
+
+  .lumora-trending-category__title {
+    font-size: 16px;
+  }
+
+  .lumora-trending-category__content p {
+    font-size: 10px;
+  }
+
+  .lumora-trending-category__stats {
+    flex-wrap: wrap;
+
+    gap: 7px 10px;
+  }
+
+  .lumora-trending-category__stats strong {
+    margin-left: 0;
+  }
+
+  .lumora-trending-category__read {
+    display: none;
+  }
+
+  .lumora-trending-category__explore-box {
+    align-items: flex-start;
+
+    padding: 18px;
+
+    gap: 13px;
+  }
+
+  .lumora-trending-category__explore-box a {
+    align-self: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .lumora-trending-category__container {
+    width: min(100% - 20px, var(--container-width));
+  }
+
+  .lumora-trending-category__hero h1 {
+    font-size: 33px;
+  }
+
+  .lumora-trending-category__hero p {
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+  .lumora-trending-category__story {
+    grid-template-columns: 26px 62px minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding: 11px;
+  }
+
+  .lumora-trending-category__cover {
+    width: 62px;
+
+    height: 86px;
+  }
+
+  .lumora-trending-category__rank {
+    font-size: 10px;
+  }
+
+  .lumora-trending-category__title {
+    font-size: 14px;
+  }
+
+  .lumora-trending-category__author {
+    font-size: 8px;
+  }
+
+  .lumora-trending-category__content p {
+    display: none;
+  }
+
+  .lumora-trending-category__stats {
+    margin-top: 8px;
+
+    font-size: 8px;
+  }
+
+  .lumora-trending-category__stats strong {
+    font-size: 9px;
+  }
+
+  .lumora-trending-category__explore {
+    padding-bottom: 48px;
+  }
+
+  .lumora-trending-category__explore-box {
+    flex-wrap: wrap;
+  }
+
+  .lumora-trending-category__explore-box > div {
+    flex: 1 1 calc(100% - 45px);
+  }
+
+  .lumora-trending-category__explore-box a {
+    width: 100%;
+
+    margin-top: 3px;
+  }
+}

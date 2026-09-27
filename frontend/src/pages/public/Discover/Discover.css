@@ -1,0 +1,494 @@
+/* =========================================================
+   DISCOVER PAGE
+========================================================= */
+
+.lumora-discover {
+  min-height: 100vh;
+
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.lumora-discover__main {
+  min-height: auto;
+}
+
+.lumora-discover__container {
+  width: min(100% - 32px, var(--container-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lumora-discover__hero {
+  padding: 76px 0 64px;
+
+  background: var(--color-bg);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-discover__eyebrow {
+  color: var(--color-primary);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+.lumora-discover__hero h1 {
+  max-width: 760px;
+
+  margin-top: 14px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.lumora-discover__hero h1 span {
+  color: var(--color-primary);
+}
+
+.lumora-discover__hero p {
+  max-width: 600px;
+
+  margin-top: 18px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* Search */
+
+.lumora-discover__search {
+  width: min(100%, 620px);
+
+  min-height: 48px;
+
+  margin-top: 28px;
+
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  border: 1px solid var(--color-border-strong);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-muted);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.lumora-discover__search:focus-within {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px var(--color-primary-soft);
+}
+
+.lumora-discover__search input {
+  width: 100%;
+
+  min-width: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--color-text-primary);
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.lumora-discover__search input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.lumora-discover__filters {
+  padding: 34px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-discover__filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-text-muted);
+}
+
+.lumora-discover__filter-label {
+  color: var(--color-primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.lumora-discover__filter-header h2 {
+  margin-top: 5px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.lumora-discover__categories {
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding-bottom: 3px;
+
+  scrollbar-width: none;
+}
+
+.lumora-discover__categories::-webkit-scrollbar {
+  display: none;
+}
+
+.lumora-discover__category {
+  flex: 0 0 auto;
+
+  min-height: 34px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 999px;
+
+  background: var(--color-surface);
+
+  color: var(--color-text-secondary);
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.lumora-discover__category:hover {
+  border-color: var(--color-primary);
+
+  color: var(--color-primary);
+}
+
+.lumora-discover__category--active {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+}
+
+.lumora-discover__category--active:hover {
+  background: var(--color-primary-hover);
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   STORY SECTIONS
+========================================================= */
+
+.lumora-discover__section {
+  padding: 48px 0;
+  background: var(--color-bg);
+}
+
+.lumora-discover__section--muted {
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-discover__section-header {
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.lumora-discover__section-header span:first-child {
+  color: var(--color-primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+.lumora-discover__section-header h2 {
+  margin-top: 5px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 23px;
+  font-weight: 650;
+
+  line-height: 1.2;
+}
+
+.lumora-discover__section-header a {
+  display: inline-flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  gap: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.lumora-discover__section-header a:hover {
+  color: var(--color-primary-hover);
+
+  gap: 9px;
+}
+
+.lumora-discover__result-count {
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.lumora-discover__empty {
+    min-height: 180px;
+
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-muted);
+
+  text-align: center;
+}
+
+.lumora-discover__empty h3 {
+  margin-top: 12px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 16px;
+}
+
+.lumora-discover__empty p {
+  margin-top: 6px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+}
+
+.lumora-discover__empty button {
+  margin-top: 16px;
+
+  min-height: 34px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: transparent;
+
+  color: var(--color-primary);
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.lumora-discover__empty button:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .lumora-discover__container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .lumora-discover__hero {
+    padding: 60px 0 52px;
+  }
+
+  .lumora-discover__hero h1 {
+    font-size: clamp(38px, 8vw, 52px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .lumora-discover__section {
+    padding: 56px 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .lumora-discover__hero {
+    padding: 50px 0 44px;
+  }
+
+  .lumora-discover__hero h1 {
+    font-size: 38px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .lumora-discover__hero p {
+    margin-top: 14px;
+
+    font-size: 13px;
+  }
+
+  .lumora-discover__search {
+    min-height: 46px;
+
+    margin-top: 22px;
+  }
+
+  .lumora-discover__filters {
+    padding: 26px 0;
+  }
+
+  .lumora-discover__section {
+    padding: 48px 0;
+  }
+
+  .lumora-discover__section-header {
+    align-items: center;
+  }
+
+  .lumora-discover__section-header h2 {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .lumora-discover__container {
+    width: min(100% - 20px, var(--container-width));
+  }
+
+  .lumora-discover__hero h1 {
+    font-size: 34px;
+  }
+
+  .lumora-discover__hero p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .lumora-discover__section {
+    padding: 42px 0;
+  }
+
+  .lumora-discover__section-header {
+    margin-bottom: 18px;
+  }
+
+  .lumora-discover__section-header h2 {
+    font-size: 19px;
+  }
+}

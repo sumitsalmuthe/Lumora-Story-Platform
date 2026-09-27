@@ -1,0 +1,382 @@
+/* =========================================================
+   CONTINUE READING
+========================================================= */
+
+.lumora-continue-reading {
+  width: 100%;
+
+  padding: 56px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lumora-continue-reading__container {
+  width: min(100% - 32px, var(--container-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HORIZONTAL LIST
+========================================================= */
+
+.lumora-continue-reading__list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  gap: 16px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 2px 2px 6px;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  overscroll-behavior-x: contain;
+
+  scrollbar-width: none;
+}
+
+.lumora-continue-reading__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.lumora-continue-reading__card {
+  position: relative;
+
+  flex: 0 0 360px;
+
+  width: 360px;
+  min-width: 360px;
+
+  min-height: 132px;
+
+  padding: 15px;
+
+  display: grid;
+
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  box-sizing: border-box;
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-continue-reading__card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.lumora-continue-reading__cover {
+  width: 58px;
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  border: 1px solid var(--color-border);
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lumora-continue-reading__content {
+  min-width: 0;
+}
+
+.lumora-continue-reading__content h3 {
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  line-height: 1.35;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.lumora-continue-reading__author,
+.lumora-continue-reading__chapter {
+  margin-top: 4px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.lumora-continue-reading__progress {
+  width: 100%;
+
+  height: 4px;
+
+  margin-top: 10px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: var(--color-border);
+}
+
+.lumora-continue-reading__progress-bar {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--color-primary);
+
+  transition: width 300ms ease;
+}
+
+.lumora-continue-reading__percentage {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   CONTINUE BUTTON
+========================================================= */
+
+.lumora-continue-reading__action {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: transparent;
+
+  color: var(--color-text-primary);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-continue-reading__action:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  transform: translateX(1px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .lumora-continue-reading {
+    padding: 48px 0;
+  }
+
+  .lumora-continue-reading__container {
+    width: min(
+      100% - 24px,
+      var(--container-width)
+    );
+  }
+
+  .lumora-continue-reading__list {
+    gap: 14px;
+  }
+
+  .lumora-continue-reading__card {
+    flex-basis: 340px;
+
+    width: 340px;
+    min-width: 340px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+  .lumora-continue-reading {
+    padding: 40px 0;
+  }
+
+  .lumora-continue-reading__container {
+    width: min(
+      100% - 20px,
+      var(--container-width)
+    );
+  }
+
+  .lumora-continue-reading__list {
+    gap: 12px;
+
+    padding-left: 2px;
+    padding-right: 2px;
+
+    scroll-snap-type: x proximity;
+  }
+
+  .lumora-continue-reading__card {
+    flex: 0 0 calc(100vw - 42px);
+
+    width: calc(100vw - 42px);
+    min-width: calc(100vw - 42px);
+
+    scroll-snap-align: start;
+
+    padding: 13px;
+
+    grid-template-columns: 52px minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+  .lumora-continue-reading__cover {
+    width: 52px;
+    height: 70px;
+  }
+
+  .lumora-continue-reading__action {
+    grid-column: 2;
+
+    justify-self: start;
+
+    margin-top: 2px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .lumora-continue-reading__card {
+    flex-basis: calc(100vw - 36px);
+
+    width: calc(100vw - 36px);
+    min-width: calc(100vw - 36px);
+
+    padding: 12px;
+
+    grid-template-columns: 48px minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .lumora-continue-reading__cover {
+    width: 48px;
+    height: 66px;
+  }
+
+  .lumora-continue-reading__content h3 {
+    font-size: 13px;
+  }
+
+  .lumora-continue-reading__author,
+  .lumora-continue-reading__chapter {
+    font-size: 10px;
+  }
+}

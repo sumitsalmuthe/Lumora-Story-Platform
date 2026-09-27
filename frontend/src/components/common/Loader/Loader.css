@@ -1,0 +1,50 @@
+.lumora-loader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: var(--color-text-secondary);
+}
+
+.lumora-loader--full-page {
+  width: 100%;
+  min-height: 300px;
+}
+
+.lumora-loader__spinner {
+  display: block;
+
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+
+  animation: lumora-loader-spin 0.7s linear infinite;
+}
+
+.lumora-loader__spinner--small {
+  width: 16px;
+  height: 16px;
+}
+
+.lumora-loader__spinner--medium {
+  width: 24px;
+  height: 24px;
+}
+
+.lumora-loader__spinner--large {
+  width: 36px;
+  height: 36px;
+  border-width: 3px;
+}
+
+.lumora-loader__label {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+@keyframes lumora-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

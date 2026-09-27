@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" fill="none">
+
+  <defs>
+    <linearGradient
+      id="lumora-orange"
+      x1="12"
+      y1="78"
+      x2="72"
+      y2="8"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#FF4B18"/>
+      <stop offset="0.55" stop-color="#FF6A00"/>
+      <stop offset="1" stop-color="#FFB52E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lumora Feather -->
+
+  <g transform="translate(5 5)">
+
+    <path
+      d="M38 76
+         C20 67 12 51 17 37
+         C22 23 37 14 62 5
+         C50 20 43 32 45 43
+         C47 54 57 62 68 66
+         C58 72 48 76 38 76Z"
+      fill="url(#lumora-orange)"
+    />
+
+    <path
+      d="M20 56
+         C19 43 27 32 42 23
+         C51 17 58 11 65 5
+         C53 20 48 31 49 41
+         C50 51 58 59 67 65
+         C48 61 32 59 20 56Z"
+      fill="#FF5A16"
+    />
+
+    <path
+      d="M22 53
+         C24 41 34 31 52 20
+         C40 34 36 44 40 51
+         C43 58 51 62 59 65
+         C43 61 31 57 22 53Z"
+      fill="#FFB52E"
+    />
+
+    <!-- Feather tip -->
+
+    <path
+      d="M59 7
+         C67 3 75 2 81 3
+         C75 9 70 17 68 25
+         C65 17 62 11 59 7Z"
+      fill="#FF7900"
+    />
+
+    <!-- Main sparkle -->
+
+    <path
+      d="M82 3
+         L86 12
+         L96 16
+         L86 20
+         L82 30
+         L78 20
+         L68 16
+         L78 12Z"
+      fill="#FF9200"
+    />
+
+    <!-- Small sparkle -->
+
+    <path
+      d="M61 9
+         L64 15
+         L70 18
+         L64 21
+         L61 27
+         L58 21
+         L52 18
+         L58 15Z"
+      fill="#FFB52E"
+    />
+
+    <!-- Tiny sparkle -->
+
+    <path
+      d="M100 14
+         L102 19
+         L107 21
+         L102 23
+         L100 28
+         L98 23
+         L93 21
+         L98 19Z"
+      fill="#FFB52E"
+    />
+
+  </g>
+
+  <!-- Lumora Text -->
+
+  <text
+    x="82"
+    y="59"
+    font-family="Inter, Poppins, Arial, sans-serif"
+    font-size="48"
+    font-weight="800"
+    letter-spacing="-1.6"
+    fill="#171B24"
+  >Lumora</text>
+
+</svg>

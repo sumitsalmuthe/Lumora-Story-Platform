@@ -1,0 +1,334 @@
+.lumora-bookmarks {
+  min-height: 100vh;
+  background: #fff;
+  padding: 48px 0 80px;
+}
+
+.lumora-bookmarks__container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.lumora-bookmarks__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.lumora-bookmarks__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff7043;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.lumora-bookmarks__header h1 {
+  margin: 0;
+  color: #151515;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.lumora-bookmarks__header p {
+  margin: 10px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.lumora-bookmarks__count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.lumora-bookmarks__loading {
+  padding: 100px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.lumora-bookmarks__error {
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  border: 1px solid #ffd5ca;
+  border-radius: 8px;
+  background: #fff6f3;
+  color: #d94f2b;
+  font-size: 13px;
+}
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.lumora-bookmarks__empty {
+  padding: 80px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.lumora-bookmarks__empty-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff1ec;
+  color: #ff7043;
+}
+
+.lumora-bookmarks__empty h2 {
+  margin: 0;
+  color: #191919;
+  font-size: 22px;
+}
+
+.lumora-bookmarks__empty p {
+  max-width: 430px;
+  margin: 10px auto 24px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.lumora-bookmarks__discover-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 7px;
+  background: #ff7043;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.lumora-bookmarks__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.lumora-bookmarks__card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  background: #fff;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lumora-bookmarks__card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.lumora-bookmarks__cover {
+  width: 88px;
+  height: 118px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #fff1ec;
+  color: #ff7043;
+  text-decoration: none;
+}
+
+.lumora-bookmarks__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.lumora-bookmarks__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.lumora-bookmarks__title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.lumora-bookmarks__title {
+  overflow: hidden;
+  color: #181818;
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lumora-bookmarks__title:hover {
+  color: #ff7043;
+}
+
+.lumora-bookmarks__category {
+  flex-shrink: 0;
+  padding: 4px 7px;
+  border-radius: 20px;
+  background: #fff1ec;
+  color: #ff7043;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.lumora-bookmarks__content p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.lumora-bookmarks__meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.lumora-bookmarks__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #888;
+  font-size: 11px;
+}
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.lumora-bookmarks__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.lumora-bookmarks__open,
+.lumora-bookmarks__remove {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e4e4e4;
+  border-radius: 50%;
+  background: #fff;
+  color: #555;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lumora-bookmarks__open:hover {
+  border-color: #ff7043;
+  color: #ff7043;
+}
+
+.lumora-bookmarks__remove:hover {
+  border-color: #e45b3b;
+  color: #e45b3b;
+}
+
+.lumora-bookmarks__remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+  .lumora-bookmarks {
+    padding: 32px 0 60px;
+  }
+
+  .lumora-bookmarks__container {
+    width: min(100% - 24px, 1100px);
+  }
+
+  .lumora-bookmarks__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .lumora-bookmarks__header h1 {
+    font-size: 30px;
+  }
+
+  .lumora-bookmarks__card {
+    align-items: flex-start;
+  }
+
+  .lumora-bookmarks__cover {
+    width: 72px;
+    height: 98px;
+  }
+
+  .lumora-bookmarks__title {
+    font-size: 16px;
+  }
+
+  .lumora-bookmarks__title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .lumora-bookmarks__actions {
+    flex-direction: column;
+  }
+}

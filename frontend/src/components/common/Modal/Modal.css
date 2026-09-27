@@ -1,0 +1,144 @@
+.lumora-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: var(--color-overlay);
+}
+
+.lumora-modal__dialog {
+  width: 100%;
+  max-height: calc(100vh - 40px);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-lg);
+
+  animation: lumora-modal-enter 160ms ease-out;
+}
+
+.lumora-modal__dialog--small {
+  max-width: 380px;
+}
+
+.lumora-modal__dialog--medium {
+  max-width: 520px;
+}
+
+.lumora-modal__dialog--large {
+  max-width: 760px;
+}
+
+.lumora-modal__header {
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-modal__title {
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.lumora-modal__close {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--color-text-secondary);
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.lumora-modal__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+}
+
+.lumora-modal__body {
+  padding: 20px;
+
+  overflow-y: auto;
+
+  color: var(--color-text-secondary);
+}
+
+.lumora-modal__footer {
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+@keyframes lumora-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .lumora-modal {
+    padding: 12px;
+  }
+
+  .lumora-modal__dialog {
+    max-height: calc(100vh - 24px);
+  }
+
+  .lumora-modal__header {
+    min-height: 56px;
+    padding: 0 16px;
+  }
+
+  .lumora-modal__body {
+    padding: 16px;
+  }
+
+  .lumora-modal__footer {
+    padding: 14px 16px;
+  }
+}

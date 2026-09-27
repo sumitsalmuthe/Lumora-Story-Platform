@@ -1,0 +1,122 @@
+/* =========================================================
+   TRENDING STORIES
+========================================================= */
+
+.lumora-trending-stories {
+  width: 100%;
+
+  padding: 56px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lumora-trending-stories__container {
+  width: min(100% - 32px, var(--container-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   STORY ROW
+========================================================= */
+
+.lumora-trending-stories
+  .lumora-story-row {
+  margin-top: 2px;
+}
+
+/* =========================================================
+   STORY CARDS
+========================================================= */
+
+.lumora-trending-stories
+  .lumora-story-card {
+  box-shadow: none;
+}
+
+.lumora-trending-stories
+  .lumora-story-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   SCROLL EXPERIENCE
+========================================================= */
+
+.lumora-trending-stories
+  .lumora-story-row::-webkit-scrollbar {
+  display: none;
+}
+
+.lumora-trending-stories
+  .lumora-story-row {
+  scrollbar-width: none;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  overscroll-behavior-x: contain;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .lumora-trending-stories {
+    padding: 48px 0;
+  }
+
+  .lumora-trending-stories__container {
+    width: min(
+      100% - 24px,
+      var(--container-width)
+    );
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .lumora-trending-stories {
+    padding: 40px 0;
+  }
+
+  .lumora-trending-stories__container {
+    width: min(
+      100% - 20px,
+      var(--container-width)
+    );
+  }
+
+  .lumora-trending-stories
+    .lumora-story-row {
+    margin-top: 0;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .lumora-trending-stories {
+    padding: 36px 0;
+  }
+}

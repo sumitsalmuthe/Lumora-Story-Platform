@@ -1,0 +1,2099 @@
+/* =========================================================
+   STORY DETAILS
+========================================================= */
+
+.lumora-story-details {
+  width: 100%;
+  overflow: hidden;
+
+  background: var(--color-bg);
+
+  color: var(--color-text-primary);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+.lumora-story-details__container {
+  width: min(100% - 32px, var(--container-width));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.lumora-story-details__topbar {
+  border-bottom: 1px solid var(--color-border);
+
+  background: var(--color-bg);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-story-details__back {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.lumora-story-details__back:hover {
+  color: var(--color-primary);
+  gap: 10px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lumora-story-details__hero {
+  padding: 72px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-story-details__hero-grid {
+  display: grid;
+
+  grid-template-columns: 270px minmax(0, 1fr);
+
+  gap: 48px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.lumora-story-details__cover {
+  width: 270px;
+  height: 390px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-md);
+}
+
+.lumora-story-details__cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.lumora-story-details__cover-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      var(--color-primary-soft),
+      transparent 40%
+    ),
+    var(--color-surface);
+
+  color: var(--color-primary);
+}
+
+.lumora-story-details__cover-placeholder span {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   STORY INFO
+========================================================= */
+
+.lumora-story-details__info {
+  min-width: 0;
+}
+
+.lumora-story-details__badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.lumora-story-details__badge,
+.lumora-story-details__status {
+  min-height: 26px;
+
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 999px;
+
+  background: var(--color-surface);
+
+  color: var(--color-text-secondary);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.lumora-story-details__badge--primary {
+  border-color: transparent;
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.lumora-story-details__status {
+  border-color: transparent;
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+}
+
+.lumora-story-details__info h1 {
+  max-width: 850px;
+
+  margin-top: 17px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.lumora-story-details__subtitle {
+  max-width: 720px;
+
+  margin-top: 12px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   AUTHOR
+========================================================= */
+
+.lumora-story-details__author {
+  width: fit-content;
+
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--color-text-primary);
+
+  transition: color var(--transition-fast);
+}
+
+.lumora-story-details__author:hover {
+  color: var(--color-primary);
+}
+
+.lumora-story-details__author-avatar,
+.lumora-story-details__author-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  font-weight: 700;
+}
+
+.lumora-story-details__author-avatar {
+  width: 40px;
+  height: 40px;
+
+  font-size: 11px;
+}
+
+.lumora-story-details__author span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lumora-story-details__author small {
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+.lumora-story-details__author strong {
+  font-size: 13px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.lumora-story-details__stats {
+  margin-top: 28px;
+
+  padding: 17px 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-story-details__stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--color-primary);
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.lumora-story-details__stats small {
+  margin-left: 2px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.lumora-story-details__actions {
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.lumora-story-details__read-button {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-story-details__read-button:hover {
+  background: var(--color-primary-hover);
+
+  color: #ffffff;
+}
+
+.lumora-story-details__read-button:active {
+  transform: translateY(1px);
+}
+
+.lumora-story-details__bookmark-button {
+  width: 44px;
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.lumora-story-details__bookmark-button:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.lumora-story-details__updated {
+  margin-top: 10px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.lumora-story-details__content-section {
+  padding: 78px 0;
+
+  background: var(--color-bg);
+
+  transition: background-color var(--transition-normal);
+}
+
+.lumora-story-details__content-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 260px;
+
+  gap: 80px;
+}
+
+.lumora-story-details__eyebrow {
+  color: var(--color-primary);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.lumora-story-details__description h2 {
+  margin-top: 9px;
+
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 650;
+
+  letter-spacing: -0.7px;
+}
+
+.lumora-story-details__description > p {
+  max-width: 760px;
+
+  margin-top: 15px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.lumora-story-details__tags {
+  margin-top: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.lumora-story-details__tags span {
+  padding: 7px 11px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 999px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.lumora-story-details__quick-info {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.lumora-story-details__quick-info div {
+  padding: 14px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-story-details__quick-info div:first-child {
+  padding-top: 0;
+}
+
+.lumora-story-details__quick-info div:last-child {
+  padding-bottom: 0;
+
+  border-bottom: 0;
+}
+
+.lumora-story-details__quick-info small {
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.lumora-story-details__quick-info strong {
+  color: var(--color-text-primary);
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   CHAPTERS
+========================================================= */
+
+.lumora-story-details__chapters {
+  padding: 78px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-story-details__section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.lumora-story-details__section-header h2 {
+  margin-top: 8px;
+
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 650;
+
+  letter-spacing: -0.7px;
+}
+
+.lumora-story-details__chapter-count {
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+.lumora-story-details__chapter-list {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+
+  background: var(--color-surface);
+}
+
+.lumora-story-details__chapter {
+  min-height: 76px;
+
+  padding: 13px 18px;
+
+  display: grid;
+
+  grid-template-columns: 55px minmax(0, 1fr) 80px 20px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border-bottom: 1px solid var(--color-border);
+
+  color: var(--color-text-primary);
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.lumora-story-details__chapter:last-child {
+  border-bottom: 0;
+}
+
+.lumora-story-details__chapter:hover {
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.lumora-story-details__chapter-number {
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.lumora-story-details__chapter-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.lumora-story-details__chapter-info strong {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 13px;
+}
+
+.lumora-story-details__chapter-info span {
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+.lumora-story-details__chapter-views {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+.lumora-story-details__chapter-arrow {
+  color: var(--color-text-muted);
+}
+
+.lumora-story-details__load-more {
+  margin: 18px auto 0;
+
+  display: block;
+
+  padding: 9px 14px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.lumora-story-details__load-more:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   AUTHOR SECTION
+========================================================= */
+
+.lumora-story-details__author-section {
+  padding: 78px 0;
+
+  background: var(--color-bg);
+
+  transition: background-color var(--transition-normal);
+}
+
+.lumora-story-details__author-card {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.lumora-story-details__author-large {
+  width: 78px;
+  height: 78px;
+
+  font-size: 20px;
+}
+
+.lumora-story-details__author-card-content {
+  min-width: 0;
+}
+
+.lumora-story-details__author-card-content h2 {
+  margin-top: 7px;
+
+  font-family: var(--font-heading);
+
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.lumora-story-details__author-card-content p {
+  max-width: 600px;
+
+  margin-top: 7px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.lumora-story-details__author-card-content a {
+  margin-top: 13px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.lumora-story-details__author-card-content a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lumora-story-details__cta {
+  padding: 80px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-story-details__cta-card {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 48px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+
+  color: var(--color-primary);
+}
+
+.lumora-story-details__cta-card > span {
+  margin-top: 14px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.lumora-story-details__cta-card h2 {
+  margin-top: 7px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 29px;
+  font-weight: 650;
+}
+
+.lumora-story-details__cta-card p {
+  margin-top: 8px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+}
+
+.lumora-story-details__cta-card a {
+  margin-top: 20px;
+
+  min-height: 40px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-story-details__cta-card a:hover {
+  background: var(--color-primary-hover);
+
+  color: #ffffff;
+}
+
+.lumora-story-details__cta-card a:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .lumora-story-details__hero {
+    padding: 55px 0;
+  }
+
+  .lumora-story-details__hero-grid {
+    grid-template-columns: 210px minmax(0, 1fr);
+
+    gap: 30px;
+  }
+
+  .lumora-story-details__cover {
+    width: 210px;
+    height: 310px;
+  }
+
+  .lumora-story-details__content-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .lumora-story-details__quick-info {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+  }
+
+  .lumora-story-details__quick-info div {
+    padding: 0;
+
+    border-bottom: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .lumora-story-details__container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .lumora-story-details__hero {
+    padding: 42px 0;
+  }
+
+  .lumora-story-details__hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .lumora-story-details__cover {
+    width: 190px;
+    height: 275px;
+
+    margin: 0 auto;
+  }
+
+  .lumora-story-details__info h1 {
+    font-size: 39px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .lumora-story-details__subtitle {
+    font-size: 13px;
+  }
+
+  .lumora-story-details__stats {
+    gap: 17px;
+  }
+
+  .lumora-story-details__stats span {
+    font-size: 11px;
+  }
+
+  .lumora-story-details__stats small {
+    display: none;
+  }
+
+  .lumora-story-details__content-section,
+  .lumora-story-details__chapters,
+  .lumora-story-details__author-section,
+  .lumora-story-details__cta {
+    padding: 58px 0;
+  }
+
+  .lumora-story-details__quick-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lumora-story-details__chapter {
+    grid-template-columns: 38px minmax(0, 1fr) 20px;
+
+    gap: 10px;
+  }
+
+  .lumora-story-details__chapter-views {
+    display: none;
+  }
+
+  .lumora-story-details__author-card {
+    padding: 22px;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .lumora-story-details__author-large {
+    width: 62px;
+    height: 62px;
+
+    font-size: 16px;
+  }
+
+  .lumora-story-details__cta-card {
+    padding: 40px 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .lumora-story-details__container {
+    width: min(100% - 20px, var(--container-width));
+  }
+
+  .lumora-story-details__actions {
+    width: 100%;
+  }
+
+  .lumora-story-details__read-button {
+    flex: 1;
+  }
+
+  .lumora-story-details__stats {
+    justify-content: space-between;
+
+    gap: 8px;
+  }
+
+  .lumora-story-details__info h1 {
+    font-size: 35px;
+  }
+}
+
+/* =========================================================
+   COMMENTS
+========================================================= */
+
+.lumora-story-details__comments {
+  padding: 72px 0;
+
+  background: var(--color-bg);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__comment-form {
+  margin-bottom: 32px;
+
+  padding: 18px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+}
+
+.lumora-story-details__comment-form textarea {
+  width: 100%;
+
+  min-height: 110px;
+
+  resize: vertical;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--color-text-primary);
+
+  font-family: inherit;
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.lumora-story-details__comment-form textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.lumora-story-details__comment-form-footer {
+  margin-top: 12px;
+
+  padding-top: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__comment-form-footer span {
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+.lumora-story-details__comment-form-footer button {
+  min-height: 36px;
+
+  padding: 0 16px;
+
+  border: 0;
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.lumora-story-details__comment-form-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lumora-story-details__comments-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.lumora-story-details__comment {
+  padding: 20px;
+
+  display: flex;
+
+  gap: 14px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+}
+
+.lumora-story-details__comment-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lumora-story-details__comment-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.lumora-story-details__comment-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.lumora-story-details__comment-meta strong {
+  color: var(--color-text-primary);
+
+  font-size: 13px;
+}
+
+.lumora-story-details__comment-meta span {
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+.lumora-story-details__comment-body p {
+  margin-top: 8px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.lumora-story-details__reply-count {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  color: var(--color-primary);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lumora-story-details__comments-empty {
+  padding: 48px 20px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  text-align: center;
+}
+
+.lumora-story-details__comments-empty h3 {
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 17px;
+}
+
+.lumora-story-details__comments-empty p {
+  margin-top: 6px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+}
+
+/* =====================================================
+   COMMENT ACTIONS
+===================================================== */
+
+.lumora-story-details__comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.lumora-story-details__comment-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lumora-story-details__comment-action:hover {
+  color: var(--color-primary);
+}
+
+.lumora-story-details__comment-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lumora-story-details__comment-action--liked {
+  color: var(--color-primary);
+}
+
+/* =====================================================
+   COMMENT EDIT
+===================================================== */
+
+.lumora-story-details__comment-edit {
+  margin-top: 10px;
+}
+
+.lumora-story-details__comment-edit textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.lumora-story-details__comment-edit textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.lumora-story-details__comment-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lumora-story-details__comment-edit-actions button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lumora-story-details__comment-edit-actions button:last-child {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+
+/* =====================================================
+   EDITED LABEL
+===================================================== */
+
+.lumora-story-details__edited-label {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  font-style: italic;
+}
+
+
+/* =====================================================
+   REPLY FORM
+===================================================== */
+
+.lumora-story-details__reply-form {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.lumora-story-details__reply-form textarea {
+  width: 100%;
+  min-height: 75px;
+  resize: vertical;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.lumora-story-details__reply-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__reply-actions > span {
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.lumora-story-details__reply-actions > div {
+  display: flex;
+  gap: 8px;
+}
+
+.lumora-story-details__reply-actions button {
+  min-height: 30px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lumora-story-details__reply-actions button:last-child {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.lumora-story-details__reply-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   REPLIES
+===================================================== */
+
+.lumora-story-details__replies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  margin-left: 28px;
+  padding-left: 18px;
+  border-left: 2px solid var(--color-border);
+}
+
+.lumora-story-details__reply {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.lumora-story-details__reply .lumora-story-details__comment-avatar {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  font-size: 9px;
+}
+
+.lumora-story-details__reply-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.lumora-story-details__reply-content p {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   DELETE
+===================================================== */
+
+.lumora-story-details__comment-action--delete {
+  color: #d65c5c;
+}
+
+.lumora-story-details__comment-action--delete:hover {
+  color: #b83d3d;
+}
+
+.lumora-story-details__comment-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.lumora-story-details__comment-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lumora-story-details__comment-action:hover {
+  color: var(--color-primary);
+}
+
+.lumora-story-details__comment-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lumora-story-details__comment-action--liked {
+  color: var(--color-primary);
+}
+
+.lumora-story-details__comment-action--delete {
+  color: #d65c5c;
+}
+
+.lumora-story-details__comment-action--delete:hover {
+  color: #b83d3d;
+}
+
+.lumora-story-details__edited-label {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  font-style: italic;
+}
+
+.lumora-story-details__comment-edit {
+  margin-top: 10px;
+}
+
+.lumora-story-details__comment-edit textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.lumora-story-details__comment-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lumora-story-details__comment-edit-actions button,
+.lumora-story-details__reply-actions button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lumora-story-details__comment-edit-actions button:last-child,
+.lumora-story-details__reply-actions button:last-child {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.lumora-story-details__reply-form {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.lumora-story-details__reply-form textarea {
+  width: 100%;
+  min-height: 75px;
+  resize: vertical;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.lumora-story-details__reply-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__reply-actions > span {
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.lumora-story-details__reply-actions > div {
+  display: flex;
+  gap: 8px;
+}
+
+.lumora-story-details__reply-actions button:disabled,
+.lumora-story-details__comment-edit-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lumora-story-details__replies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  margin-left: 28px;
+  padding-left: 18px;
+  border-left: 2px solid var(--color-border);
+}
+
+.lumora-story-details__reply {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.lumora-story-details__reply .lumora-story-details__comment-avatar {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  font-size: 9px;
+}
+
+.lumora-story-details__reply-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.lumora-story-details__reply-content p {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   COMMENTS RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+  .lumora-story-details__comment {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .lumora-story-details__comment-actions {
+    gap: 11px;
+  }
+
+  .lumora-story-details__comment-action {
+    font-size: 10px;
+  }
+
+  .lumora-story-details__replies {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .lumora-story-details__reply {
+    padding: 10px;
+  }
+
+  .lumora-story-details__reply-form {
+    margin-top: 10px;
+  }
+
+  .lumora-story-details__reply-actions {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .lumora-story-details__reply-actions > div {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .lumora-story-details__comment {
+    padding: 12px;
+  }
+
+  .lumora-story-details__comment-avatar {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  .lumora-story-details__comment-actions {
+    gap: 9px;
+  }
+
+  .lumora-story-details__comment-action {
+    font-size: 9px;
+  }
+
+  .lumora-story-details__replies {
+    margin-left: 4px;
+    padding-left: 8px;
+  }
+}
+
+/* =====================================================
+   STORY DETAILS - HERO
+===================================================== */
+
+.lumora-story-details__hero {
+  padding: 64px 0;
+  background: var(--color-bg);
+}
+
+.lumora-story-details__hero-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.lumora-story-details__hero-content {
+  min-width: 0;
+}
+
+.lumora-story-details__hero-content h1 {
+  margin-top: 10px;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.05;
+}
+
+.lumora-story-details__subtitle {
+  margin-top: 12px;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.lumora-story-details__description {
+  max-width: 720px;
+  margin-top: 20px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lumora-story-details__story-author {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+.lumora-story-details__story-author span {
+  color: var(--color-text-muted);
+}
+
+.lumora-story-details__story-author strong {
+  color: var(--color-text-primary);
+}
+
+.lumora-story-details__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lumora-story-details__stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.lumora-story-details__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.lumora-story-details__primary-button {
+  min-height: 40px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lumora-story-details__icon-button {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.lumora-story-details__icon-button:hover,
+.lumora-story-details__icon-button--active {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+
+/* =====================================================
+   CHAPTERS
+===================================================== */
+
+.lumora-story-details__chapters {
+  padding: 64px 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lumora-story-details__chapter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.lumora-story-details__chapter:hover {
+  transform: translateY(-1px);
+}
+
+.lumora-story-details__chapter-number {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.lumora-story-details__chapter-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lumora-story-details__chapter-info h3 {
+  color: var(--color-text-primary);
+  font-size: 14px;
+}
+
+.lumora-story-details__chapter-info span {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.lumora-story-details__chapter > svg {
+  color: var(--color-text-muted);
+}
+
+
+/* =====================================================
+   AUTHOR
+===================================================== */
+
+.lumora-story-details__author-section {
+  padding: 64px 0;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__author-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.lumora-story-details__author-large {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.lumora-story-details__author-card-content {
+  min-width: 0;
+}
+
+.lumora-story-details__author-card-content h2 {
+  margin-top: 7px;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 24px;
+}
+
+.lumora-story-details__author-card-content p {
+  max-width: 620px;
+  margin-top: 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lumora-story-details__author-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.lumora-story-details__cta {
+  padding: 64px 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.lumora-story-details__cta-card {
+  padding: 48px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.lumora-story-details__cta-card > svg {
+  color: var(--color-primary);
+}
+
+.lumora-story-details__cta-card > span {
+  display: block;
+  margin-top: 14px;
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.lumora-story-details__cta-card h2 {
+  margin-top: 8px;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 28px;
+}
+
+.lumora-story-details__cta-card p {
+  margin: 8px auto 20px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   EMPTY / ERROR / LOADING
+===================================================== */
+
+.lumora-story-details__loading,
+.lumora-story-details__error,
+.lumora-story-details__chapters-empty {
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.lumora-story-details__error-banner {
+  padding: 10px 16px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .lumora-story-details__hero,
+  .lumora-story-details__chapters,
+  .lumora-story-details__comments,
+  .lumora-story-details__author-section,
+  .lumora-story-details__cta {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .lumora-story-details__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .lumora-story-details__cover {
+    width: min(220px, 100%);
+    margin: 0 auto;
+  }
+
+  .lumora-story-details__hero-content h1 {
+    font-size: 36px;
+  }
+
+  .lumora-story-details__stats {
+    gap: 12px;
+  }
+
+  .lumora-story-details__author-card {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .lumora-story-details__hero-content h1 {
+    font-size: 30px;
+  }
+
+  .lumora-story-details__actions {
+    flex-wrap: wrap;
+  }
+
+  .lumora-story-details__primary-button {
+    flex: 1 1 100%;
+  }
+
+  .lumora-story-details__author-card {
+    flex-direction: column;
+  }
+
+  .lumora-story-details__chapter {
+    padding: 13px;
+    gap: 11px;
+  }
+
+}

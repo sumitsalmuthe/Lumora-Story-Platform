@@ -1,0 +1,887 @@
+/* =========================================================
+   POPULAR PAGE
+========================================================= */
+
+.lumora-popular {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.lumora-popular__container {
+  width: min(100% - 32px, var(--container-width));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lumora-popular__hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 96px 0 86px;
+
+  background:
+    radial-gradient(
+      circle at 88% 45%,
+      var(--color-primary-soft) 0,
+      transparent 23%
+    ),
+    var(--color-bg);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-popular__hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -100px;
+  top: 70px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-soft);
+
+  opacity: 0.55;
+
+  pointer-events: none;
+}
+
+.lumora-popular__hero .lumora-popular__container {
+  position: relative;
+  z-index: 1;
+}
+
+.lumora-popular__eyebrow {
+  display: block;
+
+  color: var(--color-primary);
+
+  font-size: 11px;
+  font-weight: 750;
+
+  letter-spacing: 1.5px;
+}
+
+.lumora-popular__hero h1 {
+  max-width: 760px;
+
+  margin-top: 16px;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(46px, 6vw, 72px);
+  font-weight: 750;
+
+  line-height: 0.98;
+  letter-spacing: -3px;
+}
+
+.lumora-popular__hero h1 span {
+  color: var(--color-primary);
+}
+
+.lumora-popular__hero p {
+  max-width: 610px;
+
+  margin-top: 22px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.lumora-popular__filters {
+  padding: 42px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-popular__filter-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.lumora-popular__filter-header span:first-child,
+.lumora-popular__section-heading span:first-child {
+  display: block;
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.2px;
+}
+
+.lumora-popular__filter-header h2 {
+  margin-top: 6px;
+
+  font-family: var(--font-heading);
+
+  font-size: 23px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.lumora-popular__period {
+  min-height: 34px;
+
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  background: var(--color-surface);
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lumora-popular__period svg {
+  color: var(--color-primary);
+}
+
+.lumora-popular__filter-list {
+  margin-top: 22px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.lumora-popular__filter {
+  min-height: 34px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  background: var(--color-surface);
+
+  color: var(--color-text-secondary);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-popular__filter:hover {
+  border-color: var(--color-primary);
+
+  color: var(--color-primary);
+
+  transform: translateY(-1px);
+}
+
+.lumora-popular__filter--active {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+}
+
+.lumora-popular__filter--active:hover {
+  background: var(--color-primary-hover);
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   RANKING SECTION
+========================================================= */
+
+.lumora-popular__ranking {
+  padding: 72px 0;
+
+  background: var(--color-bg);
+}
+
+.lumora-popular__section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.lumora-popular__section-heading h2 {
+  margin-top: 7px;
+
+  font-family: var(--font-heading);
+
+  font-size: 26px;
+  font-weight: 700;
+
+  letter-spacing: -0.6px;
+}
+
+.lumora-popular__section-heading p {
+  margin-top: 7px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.lumora-popular__count {
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   STORY LIST
+========================================================= */
+
+.lumora-popular__stories {
+  margin-top: 28px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.lumora-popular__story {
+  min-width: 0;
+
+  padding: 16px;
+
+  display: grid;
+
+  grid-template-columns: 42px 100px minmax(0, 1fr) 34px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-popular__story:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RANK
+========================================================= */
+
+.lumora-popular__rank {
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 15px;
+  font-weight: 750;
+
+  text-align: center;
+}
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.lumora-popular__cover {
+  width: 100px;
+  height: 134px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-sm);
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--color-primary-soft),
+      var(--color-bg-secondary)
+    );
+
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   STORY CONTENT
+========================================================= */
+
+.lumora-popular__story-content {
+  min-width: 0;
+}
+
+.lumora-popular__story-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.lumora-popular__story-meta span {
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.lumora-popular__story-meta small {
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+}
+
+.lumora-popular__story-title {
+  display: block;
+
+  margin-top: 10px;
+
+  overflow: hidden;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  transition: color var(--transition-fast);
+}
+
+.lumora-popular__story-title:hover {
+  color: var(--color-primary);
+}
+
+.lumora-popular__author {
+  margin-top: 4px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+}
+
+.lumora-popular__description {
+  max-width: 360px;
+
+  margin-top: 12px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.lumora-popular__stats {
+  margin-top: 14px;
+  padding-top: 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+}
+
+.lumora-popular__stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* =========================================================
+   READ BUTTON
+========================================================= */
+
+.lumora-popular__read {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  color: var(--color-text-secondary);
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-popular__read:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   RISING SECTION
+========================================================= */
+
+.lumora-popular__rising {
+  padding: 72px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lumora-popular__rising-grid {
+  margin-top: 28px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.lumora-popular__rising-card {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  display: grid;
+
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-popular__rising-card:hover {
+  border-color: var(--color-primary);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+.lumora-popular__rising-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.lumora-popular__rising-card span {
+  color: var(--color-primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.lumora-popular__rising-card h3 {
+  margin-top: 5px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 13px;
+  font-weight: 650;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lumora-popular__rising-card p {
+  margin-top: 3px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 10px;
+}
+
+.lumora-popular__rising-card strong {
+  color: var(--color-primary);
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   WRITER CTA
+========================================================= */
+
+.lumora-popular__writer {
+  padding: 80px 0;
+
+  background: var(--color-bg);
+}
+
+.lumora-popular__writer-box {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  padding: 52px 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.lumora-popular__writer-box > svg {
+  width: 42px;
+  height: 42px;
+
+  padding: 11px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  box-sizing: content-box;
+}
+
+.lumora-popular__writer-box > span {
+  margin-top: 17px;
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.2px;
+}
+
+.lumora-popular__writer-box h2 {
+  margin-top: 8px;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+
+  font-size: 27px;
+  font-weight: 700;
+
+  letter-spacing: -0.6px;
+}
+
+.lumora-popular__writer-box p {
+  max-width: 520px;
+
+  margin-top: 10px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lumora-popular__writer-box a {
+  min-height: 40px;
+
+  margin-top: 22px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-popular__writer-box a:hover {
+  background: var(--color-primary-hover);
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .lumora-popular__stories {
+    grid-template-columns: 1fr;
+  }
+
+  .lumora-popular__rising-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .lumora-popular__container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .lumora-popular__hero {
+    padding: 72px 0 64px;
+  }
+
+  .lumora-popular__hero h1 {
+    font-size: clamp(42px, 9vw, 60px);
+    letter-spacing: -2px;
+  }
+
+  .lumora-popular__ranking,
+  .lumora-popular__rising {
+    padding: 56px 0;
+  }
+
+  .lumora-popular__writer {
+    padding: 64px 0;
+  }
+
+  .lumora-popular__story {
+    grid-template-columns: 36px 88px minmax(0, 1fr) 32px;
+
+    gap: 11px;
+
+    padding: 13px;
+  }
+
+  .lumora-popular__cover {
+    width: 88px;
+    height: 118px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .lumora-popular__filter-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lumora-popular__section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lumora-popular__rising-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lumora-popular__story {
+    grid-template-columns: 34px 76px minmax(0, 1fr);
+  }
+
+  .lumora-popular__cover {
+    width: 76px;
+    height: 104px;
+  }
+
+  .lumora-popular__read {
+    display: none;
+  }
+
+  .lumora-popular__description {
+    display: none;
+  }
+
+  .lumora-popular__stats {
+    margin-top: 10px;
+  }
+
+  .lumora-popular__writer-box {
+    padding: 40px 20px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 480px) {
+  .lumora-popular__container {
+    width: min(100% - 20px, var(--container-width));
+  }
+
+  .lumora-popular__hero {
+    padding: 58px 0 52px;
+  }
+
+  .lumora-popular__hero h1 {
+    font-size: 40px;
+    letter-spacing: -1.7px;
+  }
+
+  .lumora-popular__hero p {
+    font-size: 13px;
+  }
+
+  .lumora-popular__filters {
+    padding: 34px 0;
+  }
+
+  .lumora-popular__ranking,
+  .lumora-popular__rising {
+    padding: 46px 0;
+  }
+
+  .lumora-popular__story {
+    grid-template-columns: 30px 68px minmax(0, 1fr);
+
+    gap: 9px;
+  }
+
+  .lumora-popular__cover {
+    width: 68px;
+    height: 94px;
+  }
+
+  .lumora-popular__story-title {
+    font-size: 14px;
+  }
+
+  .lumora-popular__stats {
+    gap: 7px;
+  }
+
+  .lumora-popular__stats span {
+    font-size: 8px;
+  }
+
+  .lumora-popular__writer {
+    padding: 48px 0;
+  }
+
+  .lumora-popular__writer-box h2 {
+    font-size: 23px;
+  }
+}

@@ -1,0 +1,63 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.5;
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+button,
+input,
+textarea,
+select {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  background: var(--color-input-bg);
+  color: var(--color-input-text);
+  border-color: var(--color-border);
+}
+
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}
+
+a {
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}

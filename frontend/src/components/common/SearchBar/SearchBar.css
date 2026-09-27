@@ -1,0 +1,310 @@
+/* =========================================================
+   SEARCH BAR
+========================================================= */
+
+.lumora-search {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-input-bg);
+
+  box-sizing: border-box;
+
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-normal),
+    box-shadow var(--transition-fast);
+}
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.lumora-search:focus-within {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px var(--color-primary-soft);
+}
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.lumora-search__icon {
+  flex: 0 0 auto;
+
+  margin-left: 14px;
+
+  color: var(--color-text-muted);
+
+  transition:
+    color var(--transition-fast);
+}
+
+.lumora-search:focus-within
+  .lumora-search__icon {
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.lumora-search__input {
+  min-width: 0;
+
+  flex: 1;
+
+  height: 44px;
+
+  padding: 0 10px;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--color-input-text);
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  box-sizing: border-box;
+}
+
+.lumora-search__input::placeholder {
+  color: var(--color-placeholder);
+
+  opacity: 1;
+}
+
+.lumora-search__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.lumora-search__clear {
+  width: 30px;
+  height: 30px;
+
+  margin-right: 2px;
+
+  padding: 0;
+
+  flex: 0 0 30px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--color-text-muted);
+
+  cursor: pointer;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.lumora-search__clear:hover {
+  color: var(--color-text-primary);
+
+  background: var(--color-bg-secondary);
+}
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.lumora-search__submit {
+  min-height: 34px;
+
+  margin-right: 5px;
+
+  padding: 0 15px;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+
+  font-family: var(--font-body);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-search__submit:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.lumora-search__submit:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.lumora-search__submit:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.5;
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.lumora-search__loader {
+  width: 16px;
+  height: 16px;
+
+  margin-right: 12px;
+
+  flex: 0 0 16px;
+
+  border: 2px solid var(--color-border);
+
+  border-top-color: var(--color-primary);
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
+  animation:
+    lumora-search-spin 0.7s linear infinite;
+}
+
+@keyframes lumora-search-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .lumora-search {
+    min-height: 44px;
+  }
+
+  .lumora-search__input {
+    height: 42px;
+
+    font-size: 13px;
+  }
+
+  .lumora-search__submit {
+    min-height: 32px;
+
+    padding: 0 13px;
+
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+  .lumora-search {
+    min-height: 44px;
+
+    border-radius: var(--radius-sm);
+  }
+
+  .lumora-search__icon {
+    margin-left: 12px;
+  }
+
+  .lumora-search__input {
+    height: 42px;
+
+    padding: 0 8px;
+
+    font-size: 13px;
+  }
+
+  .lumora-search__clear {
+    width: 28px;
+    height: 28px;
+
+    flex-basis: 28px;
+  }
+
+  .lumora-search__submit {
+    min-height: 32px;
+
+    margin-right: 4px;
+
+    padding: 0 11px;
+
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .lumora-search__icon {
+    margin-left: 10px;
+  }
+
+  .lumora-search__input {
+    padding: 0 6px;
+
+    font-size: 12px;
+  }
+
+  .lumora-search__submit {
+    padding: 0 9px;
+
+    font-size: 10px;
+  }
+}

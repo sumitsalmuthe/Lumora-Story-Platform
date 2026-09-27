@@ -1,0 +1,14 @@
+.lumora-home {
+  min-height: 100vh;
+
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+.lumora-home__main {
+  min-height: calc(100vh - var(--navbar-height));
+}

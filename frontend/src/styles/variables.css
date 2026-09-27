@@ -1,0 +1,107 @@
+:root {
+  /* Brand */
+  --color-primary: #ff6b35;
+  --color-primary-hover: #e85a2a;
+  --color-primary-soft: #fff1eb;
+
+  /* Light theme */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f7f7f7;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f4f4f4;
+
+  --color-text-primary: #222222;
+  --color-text-secondary: #666666;
+  --color-text-muted: #8a8a8a;
+
+  --color-border: #e5e5e5;
+  --color-border-strong: #d5d5d5;
+
+  --color-input-bg: #ffffff;
+  --color-input-text: #222222;
+  --color-placeholder: #999999;
+
+  --color-overlay: rgba(0, 0, 0, 0.45);
+
+  /* Status */
+  --color-success: #218739;
+  --color-warning: #b7791f;
+  --color-danger: #d64545;
+  --color-info: #3578c8;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Layout */
+  --container-width: 1200px;
+  --navbar-height: 68px;
+
+  /* Typography */
+  --font-body:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  --font-heading:
+    Poppins,
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 220ms ease;
+}
+
+[data-theme="dark"] {
+  /* Background */
+  --color-bg: #111111;
+  --color-bg-secondary: #181818;
+  --color-surface: #1c1c1c;
+  --color-surface-secondary: #242424;
+
+  /* Text */
+  --color-text-primary: #f3f3f3;
+  --color-text-secondary: #b8b8b8;
+  --color-text-muted: #858585;
+
+  /* Borders */
+  --color-border: #303030;
+  --color-border-strong: #404040;
+
+  /* Inputs */
+  --color-input-bg: #1c1c1c;
+  --color-input-text: #f3f3f3;
+  --color-placeholder: #777777;
+
+  /* Brand */
+  --color-primary: #ff7542;
+  --color-primary-hover: #ff8a5d;
+  --color-primary-soft: #2b1b16;
+
+  /* Overlay */
+  --color-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Status */
+  --color-success: #4caf68;
+  --color-warning: #d9a441;
+  --color-danger: #ef6262;
+  --color-info: #5c98e6;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+}

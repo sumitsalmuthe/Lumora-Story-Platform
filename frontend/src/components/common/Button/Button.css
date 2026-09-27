@@ -1,0 +1,138 @@
+.lumora-button {
+  min-height: 40px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.lumora-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.lumora-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Primary */
+
+.lumora-button--primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.lumora-button--primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+/* Secondary */
+
+.lumora-button--secondary {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.lumora-button--secondary:hover:not(:disabled) {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border-strong);
+}
+
+/* Outline */
+
+.lumora-button--outline {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border-strong);
+}
+
+.lumora-button--outline:hover:not(:disabled) {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Ghost */
+
+.lumora-button--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+
+.lumora-button--ghost:hover:not(:disabled) {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+/* Danger */
+
+.lumora-button--danger {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.lumora-button--danger:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* Sizes */
+
+.lumora-button--small {
+  min-height: 34px;
+  padding: 0 13px;
+  font-size: 13px;
+}
+
+.lumora-button--medium {
+  min-height: 40px;
+}
+
+.lumora-button--large {
+  min-height: 46px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+
+/* Full width */
+
+.lumora-button--full {
+  width: 100%;
+}
+
+/* Loader */
+
+.lumora-button__loader {
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+
+  animation: lumora-button-spin 0.7s linear infinite;
+}
+
+@keyframes lumora-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

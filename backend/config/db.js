@@ -2,8 +2,16 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
+    const mongoUri = process.env.MONGODB_URI;
+
+    if (!mongoUri) {
+      throw new Error(
+        "MONGODB_URI is not configured"
+      );
+    }
+
     const conn = await mongoose.connect(
-      process.env.MONGO_URI
+      mongoUri
     );
 
     console.log(
@@ -14,6 +22,7 @@ const connectDB = async () => {
       "MongoDB Error:",
       error.message
     );
+
     process.exit(1);
   }
 };

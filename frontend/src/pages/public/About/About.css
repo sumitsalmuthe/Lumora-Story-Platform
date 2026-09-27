@@ -1,0 +1,608 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.lumora-about {
+  width: 100%;
+  overflow: hidden;
+
+  background: var(--color-bg);
+
+  color: var(--color-text-primary);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+.lumora-about__container {
+  width: min(100% - 32px, var(--container-width));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lumora-about__hero {
+  position: relative;
+
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: var(--color-bg);
+}
+
+.lumora-about__hero-decoration {
+  position: absolute;
+
+  width: 460px;
+  height: 460px;
+
+  right: -170px;
+  top: -80px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-soft);
+
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+.lumora-about__hero-decoration::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  left: 40px;
+  bottom: 20px;
+
+  border-radius: 50%;
+
+  background: var(--color-bg);
+
+  opacity: 0.45;
+}
+
+.lumora-about__hero .lumora-about__container {
+  position: relative;
+  z-index: 1;
+}
+
+.lumora-about__eyebrow,
+.lumora-about__section-label span,
+.lumora-about__section-header > span,
+.lumora-about__split-card > span,
+.lumora-about__cta-card > span {
+  color: var(--color-primary);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.lumora-about__hero h1 {
+  max-width: 760px;
+
+  margin-top: 18px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -2.8px;
+}
+
+.lumora-about__hero h1 span {
+  display: block;
+
+  color: var(--color-primary);
+}
+
+.lumora-about__hero p {
+  max-width: 650px;
+
+  margin-top: 24px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lumora-about__intro {
+  padding: 88px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-about__intro-grid {
+  display: grid;
+
+  grid-template-columns: 190px minmax(0, 680px);
+
+  gap: 70px;
+}
+
+.lumora-about__section-label {
+  padding-top: 7px;
+}
+
+.lumora-about__intro-content h2 {
+  max-width: 620px;
+
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.lumora-about__intro-content h2 span {
+  color: var(--color-primary);
+}
+
+.lumora-about__intro-content p {
+  margin-top: 20px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.lumora-about__values {
+  padding: 88px 0;
+
+  background: var(--color-bg);
+
+  transition: background-color var(--transition-normal);
+}
+
+.lumora-about__section-header {
+  max-width: 650px;
+  margin-bottom: 34px;
+}
+
+.lumora-about__section-header h2 {
+  margin-top: 10px;
+
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.lumora-about__section-header h2 span {
+  color: var(--color-primary);
+}
+
+.lumora-about__section-header p {
+  margin-top: 10px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+}
+
+.lumora-about__values-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.lumora-about__value-card {
+  min-height: 235px;
+
+  padding: 26px 22px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-about__value-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+.lumora-about__value-icon,
+.lumora-about__split-icon,
+.lumora-about__cta-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.lumora-about__value-card h3 {
+  margin-top: 22px;
+
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.lumora-about__value-card p {
+  margin-top: 9px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SPLIT SECTION
+========================================================= */
+
+.lumora-about__split {
+  padding: 88px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-about__split-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.lumora-about__split-card {
+  padding: 34px 30px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-about__split-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+.lumora-about__split-card > span {
+  display: block;
+
+  margin-top: 20px;
+}
+
+.lumora-about__split-card h2 {
+  max-width: 400px;
+
+  margin-top: 9px;
+
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.lumora-about__split-card p {
+  max-width: 480px;
+
+  margin-top: 10px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lumora-about__split-card a {
+  margin-top: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.lumora-about__split-card a:hover {
+  color: var(--color-primary-hover);
+
+  gap: 9px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lumora-about__cta {
+  padding: 88px 0;
+
+  background: var(--color-bg);
+
+  transition: background-color var(--transition-normal);
+}
+
+.lumora-about__cta-card {
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  padding: 56px 40px;
+
+  text-align: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.lumora-about__cta-icon {
+  margin: 0 auto;
+
+  border-radius: 50%;
+}
+
+.lumora-about__cta-card > span {
+  display: block;
+
+  margin-top: 17px;
+}
+
+.lumora-about__cta-card h2 {
+  margin-top: 9px;
+
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.lumora-about__cta-card p {
+  margin-top: 10px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.lumora-about__cta-actions {
+  margin-top: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.lumora-about__cta-primary,
+.lumora-about__cta-secondary {
+  min-height: 40px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lumora-about__cta-primary {
+  background: var(--color-primary);
+
+  color: #ffffff;
+}
+
+.lumora-about__cta-primary:hover {
+  background: var(--color-primary-hover);
+
+  color: #ffffff;
+}
+
+.lumora-about__cta-secondary {
+  border: 1px solid var(--color-border);
+
+  color: var(--color-text-primary);
+}
+
+.lumora-about__cta-secondary:hover {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .lumora-about__hero {
+    min-height: 380px;
+  }
+
+  .lumora-about__intro,
+  .lumora-about__values,
+  .lumora-about__split,
+  .lumora-about__cta {
+    padding: 64px 0;
+  }
+
+  .lumora-about__intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .lumora-about__section-label {
+    padding-top: 0;
+  }
+
+  .lumora-about__values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lumora-about__value-card {
+    min-height: auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .lumora-about__container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .lumora-about__hero {
+    min-height: 400px;
+  }
+
+  .lumora-about__hero h1 {
+    font-size: 47px;
+
+    letter-spacing: -2px;
+  }
+
+  .lumora-about__hero p {
+    font-size: 13px;
+  }
+
+  .lumora-about__hero-decoration {
+    width: 300px;
+    height: 300px;
+
+    right: -150px;
+    top: -40px;
+  }
+
+  .lumora-about__intro-content h2,
+  .lumora-about__section-header h2 {
+    font-size: 27px;
+  }
+
+  .lumora-about__split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lumora-about__split-card {
+    padding: 26px 22px;
+  }
+
+  .lumora-about__cta-card {
+    padding: 40px 22px;
+  }
+
+  .lumora-about__cta-card h2 {
+    font-size: 26px;
+  }
+
+  .lumora-about__cta-actions {
+    flex-direction: column;
+  }
+
+  .lumora-about__cta-primary,
+  .lumora-about__cta-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .lumora-about__container {
+    width: min(100% - 20px, var(--container-width));
+  }
+
+  .lumora-about__hero h1 {
+    font-size: 40px;
+
+    letter-spacing: -1.7px;
+  }
+}

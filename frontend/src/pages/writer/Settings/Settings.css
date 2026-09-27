@@ -1,0 +1,648 @@
+/* =========================================
+   LUMORA — WRITER SETTINGS
+   ========================================= */
+
+.writer-settings-page {
+  min-height: 100vh;
+  background: #f8f8f7;
+  color: #222;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.settings-topbar {
+  height: 68px;
+  padding: 0 42px;
+  background: #fff;
+  border-bottom: 1px solid #e8e7e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #777;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 550;
+  transition: color 0.2s ease;
+}
+
+.settings-back:hover {
+  color: #ff6438;
+}
+
+.settings-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+}
+
+.settings-title span {
+  color: #999;
+  font-weight: 500;
+}
+
+.settings-title strong {
+  color: #252525;
+  font-weight: 700;
+}
+
+.settings-save-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #999;
+  font-size: 10px;
+}
+
+.settings-save-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.settings-save-status.saved span {
+  background: #58ad79;
+}
+
+.settings-save-status.changed span {
+  background: #f2a33b;
+}
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.writer-settings-main {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 70px;
+}
+
+.settings-intro {
+  margin-bottom: 35px;
+}
+
+.settings-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff6438;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.settings-intro h1 {
+  margin: 0;
+  color: #202020;
+  font-size: 36px;
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: -1.4px;
+}
+
+.settings-intro p {
+  max-width: 620px;
+  margin: 10px 0 0;
+  color: #858585;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================
+   LAYOUT
+   ========================================= */
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* =========================================
+   LEFT NAV
+   ========================================= */
+
+.settings-nav {
+  position: sticky;
+  top: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-nav-item {
+  min-height: 40px;
+  padding: 0 11px;
+  border-radius: 7px;
+  color: #777;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  font-weight: 550;
+  transition: all 0.2s ease;
+}
+
+.settings-nav-item:hover {
+  background: #fff4ef;
+  color: #ff6438;
+}
+
+.settings-nav-item.active {
+  background: #fff0eb;
+  color: #ff6438;
+  font-weight: 650;
+}
+
+.settings-nav-item svg {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.settings-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.settings-card {
+  padding: 27px;
+  background: #fff;
+  border: 1px solid #e8e7e5;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px rgba(30, 30, 30, 0.025);
+}
+
+.settings-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid #eeeeec;
+}
+
+.settings-card-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  background: #fff0eb;
+  color: #ff6438;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-card-heading h2 {
+  margin: 0 0 4px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.settings-card-heading p {
+  margin: 0;
+  color: #999;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   AVATAR
+   ========================================= */
+
+.settings-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #f0efed;
+}
+
+.settings-avatar {
+  width: 66px;
+  height: 66px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #ff6438;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.settings-avatar-row strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 12px;
+}
+
+.settings-avatar-row p {
+  margin: 0 0 9px;
+  color: #999;
+  font-size: 9px;
+}
+
+.outline-small-button {
+  height: 31px;
+  padding: 0 11px;
+  border: 1px solid #deddda;
+  border-radius: 6px;
+  background: #fff;
+  color: #666;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.outline-small-button:hover {
+  border-color: #ffad96;
+  color: #ff6438;
+}
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.settings-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.settings-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #333;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.settings-field input,
+.settings-field textarea,
+.settings-option select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #deddda;
+  border-radius: 7px;
+  background: #fff;
+  color: #333;
+  outline: none;
+  font-family: inherit;
+  font-size: 11px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-field input {
+  height: 42px;
+  padding: 0 12px;
+}
+
+.settings-field textarea {
+  min-height: 100px;
+  padding: 11px 12px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.settings-field input:focus,
+.settings-field textarea:focus,
+.settings-option select:focus {
+  border-color: #ff987a;
+  box-shadow: 0 0 0 3px rgba(255, 100, 56, 0.08);
+}
+
+.settings-field small {
+  display: block;
+  margin-top: 5px;
+  color: #aaa;
+  font-size: 9px;
+}
+
+/* =========================================
+   USERNAME
+   ========================================= */
+
+.username-input {
+  height: 42px;
+  box-sizing: border-box;
+  border: 1px solid #deddda;
+  border-radius: 7px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.username-input:focus-within {
+  border-color: #ff987a;
+  box-shadow: 0 0 0 3px rgba(255, 100, 56, 0.08);
+}
+
+.username-input > span {
+  padding-left: 12px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.username-input input {
+  height: 100%;
+  border: 0;
+  box-shadow: none;
+  padding-left: 3px;
+}
+
+.username-input input:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+/* =========================================
+   SETTINGS OPTIONS
+   ========================================= */
+
+.settings-option {
+  min-height: 63px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eeeeec;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.settings-option:first-of-type {
+  padding-top: 0;
+}
+
+.settings-option:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.settings-option-text {
+  min-width: 0;
+}
+
+.settings-option-text strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 11px;
+}
+
+.settings-option-text span {
+  display: block;
+  color: #999;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.settings-option select {
+  width: 125px;
+  height: 35px;
+  padding: 0 9px;
+  cursor: pointer;
+}
+
+/* =========================================
+   TOGGLE
+   ========================================= */
+
+.toggle {
+  position: relative;
+  width: 38px;
+  height: 21px;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: #d9d8d6;
+  transition: background 0.2s ease;
+}
+
+.toggle-slider::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease;
+}
+
+.toggle input:checked + .toggle-slider {
+  background: #ff6438;
+}
+
+.toggle input:checked + .toggle-slider::after {
+  transform: translateX(17px);
+}
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.settings-actions {
+  min-height: 52px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.settings-actions > span {
+  color: #999;
+  font-size: 9px;
+}
+
+.settings-save-button {
+  height: 39px;
+  padding: 0 15px;
+  border: 1px solid #ff6438;
+  border-radius: 7px;
+  background: #ff6438;
+  color: #fff;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  box-shadow: 0 4px 12px rgba(255, 100, 56, 0.13);
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.settings-save-button:hover {
+  background: #f9572a;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+  .settings-topbar {
+    padding: 0 24px;
+  }
+
+  .writer-settings-main {
+    width: min(100% - 32px, 700px);
+    padding-top: 38px;
+  }
+
+  .settings-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .settings-nav {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+
+  .settings-nav-item {
+    flex: 0 0 auto;
+    padding: 0 13px;
+  }
+}
+
+@media (max-width: 620px) {
+  .settings-topbar {
+    height: 62px;
+    padding: 0 16px;
+  }
+
+  .settings-title {
+    position: static;
+    transform: none;
+  }
+
+  .settings-save-status {
+    display: none;
+  }
+
+  .settings-back {
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    border: 1px solid #e1e0de;
+    border-radius: 7px;
+  }
+
+  .settings-back {
+    font-size: 0;
+  }
+
+  .settings-back svg {
+    width: 15px;
+  }
+
+  .writer-settings-main {
+    width: calc(100% - 24px);
+    padding: 30px 0 50px;
+  }
+
+  .settings-intro h1 {
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+
+  .settings-intro p {
+    font-size: 12px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .settings-avatar-row {
+    align-items: flex-start;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+  }
+
+  .settings-option select {
+    width: 105px;
+  }
+
+  .settings-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-actions > span {
+    text-align: center;
+  }
+
+  .settings-save-button {
+    width: 100%;
+  }
+}

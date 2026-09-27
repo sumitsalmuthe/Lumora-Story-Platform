@@ -1,0 +1,125 @@
+/* =========================================================
+   LATEST STORIES
+========================================================= */
+
+.lumora-latest-stories {
+  width: 100%;
+
+  padding: 56px 0;
+
+  background: var(--color-bg-secondary);
+
+  border-top: 1px solid var(--color-border);
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lumora-latest-stories__container {
+  width: min(100% - 32px, var(--container-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   STORY ROW
+========================================================= */
+
+.lumora-latest-stories
+  .lumora-story-row {
+  margin-top: 2px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  overscroll-behavior-x: contain;
+
+  scrollbar-width: none;
+}
+
+.lumora-latest-stories
+  .lumora-story-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   STORY CARDS
+========================================================= */
+
+.lumora-latest-stories
+  .lumora-story-card {
+  box-shadow: none;
+}
+
+.lumora-latest-stories
+  .lumora-story-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .lumora-latest-stories {
+    padding: 48px 0;
+  }
+
+  .lumora-latest-stories__container {
+    width: min(
+      100% - 24px,
+      var(--container-width)
+    );
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .lumora-latest-stories {
+    padding: 40px 0;
+  }
+
+  .lumora-latest-stories__container {
+    width: min(
+      100% - 20px,
+      var(--container-width)
+    );
+  }
+
+  .lumora-latest-stories
+    .lumora-story-row {
+    margin-top: 0;
+
+    scroll-snap-type: x proximity;
+  }
+
+  .lumora-latest-stories
+    .lumora-story-card {
+    scroll-snap-align: start;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .lumora-latest-stories {
+    padding: 36px 0;
+  }
+}

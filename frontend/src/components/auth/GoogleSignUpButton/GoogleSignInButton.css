@@ -1,0 +1,70 @@
+/* =========================================================
+   GOOGLE SIGN-IN BUTTON
+   ========================================================= */
+
+.google-signin-wrapper {
+  width: 100%;
+  min-height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    filter 0.2s ease;
+}
+
+
+
+.google-signin-button {
+  width: 100%;
+  min-height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.google-signin-button > div {
+  max-width: 100%;
+}
+
+
+
+.google-signin-button iframe {
+  max-width: 100%;
+}
+
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.google-signin-wrapper--disabled {
+  opacity: 0.55;
+  filter: grayscale(0.15);
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .google-signin-wrapper {
+    width: 100%;
+  }
+
+  .google-signin-button {
+    width: 100%;
+  }
+}
