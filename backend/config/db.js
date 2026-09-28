@@ -5,25 +5,27 @@ const connectDB = async () => {
     const mongoUri = process.env.MONGODB_URI;
 
     if (!mongoUri) {
-      throw new Error(
-        "MONGODB_URI is not configured"
-      );
+      throw new Error("MONGODB_URI is not configured");
     }
 
-    const conn = await mongoose.connect(
-      mongoUri
-    );
+    if (mongoose.connection.readyState === 1) {
+      return mongoose.connection;
+    }
+
+    const conn = await mongoose.connect(mongoUri);
 
     console.log(
       `MongoDB Connected: ${conn.connection.host}`
     );
+
+    return conn.connection;
   } catch (error) {
     console.error(
       "MongoDB Error:",
       error.message
     );
 
-    process.exit(1);
+    throw error;
   }
 };
 
