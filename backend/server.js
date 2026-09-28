@@ -71,23 +71,7 @@ const analyticsRoutes =
 const recommendationRoutes =
   require("./routes/recommendationRoutes");
 
-  console.log("ROUTE CHECK:");
-console.log("storyRoutes:", typeof storyRoutes);
-console.log("chapterRoutes:", typeof chapterRoutes);
-console.log("uploadRoutes:", typeof uploadRoutes);
-console.log("authRoutes:", typeof authRoutes);
-console.log("homeRoutes:", typeof homeRoutes);
-console.log("bookmarkRoutes:", typeof bookmarkRoutes);
-console.log("readingHistoryRoutes:", typeof readingHistoryRoutes);
-console.log("readingListRoutes:", typeof readingListRoutes);
-console.log("commentRoutes:", typeof commentRoutes);
-console.log("reviewRoutes:", typeof reviewRoutes);
-console.log("followRoutes:", typeof followRoutes);
-console.log("notificationRoutes:", typeof notificationRoutes);
-console.log("searchRoutes:", typeof searchRoutes);
-console.log("profileRoutes:", typeof profileRoutes);
-console.log("analyticsRoutes:", typeof analyticsRoutes);
-console.log("recommendationRoutes:", typeof recommendationRoutes);
+
 
 
 // ======================================
@@ -425,27 +409,23 @@ app.use(
 const PORT =
   process.env.PORT || 5000;
 
-const startServer =
-  async () => {
-    try {
-      await connectDB();
+const startServer = async () => {
+  try {
+    await connectDB();
 
-      app.listen(
-        PORT,
-        () => {
-          console.log(
-            `Server Running on Port ${PORT}`
-          );
-        }
-      );
-    } catch (error) {
-      console.error(
-        "Failed to start server:",
-        error
-      );
+    app.listen(PORT, () => {
+      console.log(`Server Running on Port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Failed to start server:", error);
+    process.exit(1);
+  }
+};
 
-      process.exit(1);
-    }
-  };
+// Start local server only
+if (require.main === module) {
+  startServer();
+}
 
-startServer();
+// Export Express app for Vercel
+module.exports = app;
